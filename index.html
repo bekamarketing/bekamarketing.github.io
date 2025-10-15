@@ -1,0 +1,838 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Beka - Fractional CMO & Marketing Partner for Growing Companies</title>
+    <meta name="description" content="Get expert-level marketing strategy and execution without the agency price tag. 20+ years experience at IBM, American Express, and Warner Music.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #d1d5db;
+            background: linear-gradient(135deg, #0a0e1a 0%, #141824 25%, #1a1f2e 50%, #1f2937 75%, #252d3a 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        
+        .credentials {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+        
+        .hero {
+            padding: 80px 0 60px;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-photo {
+            position: relative;
+        }
+        
+        .photo-placeholder {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(16, 135, 199, 0.08) 0%, rgba(251, 146, 60, 0.08) 100%);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            border-radius: 20px;
+            z-index: -1;
+        }
+        
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 17px;
+        }
+        
+        /* Fallback if no image */
+        .photo-placeholder:empty::after {
+            content: 'Your Photo Here';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #64748b;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text .subheading {
+            font-size: 28px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .hero-text .description {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(16, 135, 199, 0.25);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(16, 135, 199, 0.35);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1087c7 0%, #d97706 100%);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #94a3b8;
+        }
+        
+        .stat-detail {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 5px;
+        }
+        
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        section .section-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .experience-card {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #1087c7 0%, #d97706 100%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 135, 199, 0.4);
+        }
+        
+        .experience-card:hover::before {
+            opacity: 1;
+        }
+        
+        .company-logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .experience-card h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .experience-card p {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .services {
+            background: rgba(16, 135, 199, 0.02);
+        }
+        
+        .service-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .tier-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tier-card.featured {
+            border-color: #1087c7;
+            box-shadow: 0 20px 60px rgba(16, 135, 199, 0.15);
+        }
+        
+        .tier-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        
+        .tier-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price span {
+            font-size: 20px;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        
+        .tier-description {
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .tier-features li {
+            padding: 12px 0;
+            color: #cbd5e1;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .tier-features li:before {
+            content: "✓";
+            color: #1087c7;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+        
+        .menu-section {
+            margin-top: 60px;
+        }
+        
+        .menu-category {
+            margin-bottom: 50px;
+        }
+        
+        .menu-category h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, #1087c7 0%, #d97706 100%) 1;
+        }
+        
+        .menu-category .category-timeline {
+            font-size: 14px;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .menu-item {
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            font-size: 15px;
+            transition: background 0.2s, border-color 0.2s, transform 0.2s;
+        }
+        
+        .menu-item:hover {
+            background: rgba(16, 135, 199, 0.08);
+            border-color: rgba(16, 135, 199, 0.25);
+            transform: translateX(5px);
+        }
+        
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .value-prop {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s;
+        }
+        
+        .value-prop:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .value-prop h3 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .value-prop p {
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
+            background: rgba(16, 135, 199, 0.02);
+        }
+        
+        .cta-section h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section p {
+            font-size: 22px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-info {
+            font-size: 24px;
+            background: linear-gradient(135deg, #1087c7 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .photo-placeholder {
+                margin: 0 auto;
+            }
+            
+            .hero-text h1 {
+                font-size: 42px;
+            }
+            
+            .hero-text .subheading {
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .hero-text .subheading {
+                font-size: 20px;
+            }
+            
+            .hero-text .description {
+                font-size: 18px;
+            }
+            
+            section h2 {
+                font-size: 32px;
+            }
+            
+            .service-tiers {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .photo-placeholder {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Paul Beka</div>
+            <div class="credentials">MA, MBA | Ex-IBM, AmEx, Warner Music</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-photo">
+                        <div class="photo-placeholder">
+                            <img src="./paul-beka-photo.jpg" alt="Paul Beka">
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h1><span class="highlight">Stop Guessing.</span> Start Growing.</h1>
+                        <p class="subheading">What if you could afford the marketing partner you actually need?</p>
+                        <p class="description">
+                            Get enterprise-level marketing strategy and execution—without the six-figure salary. 
+                            I bring 20+ years of proven experience from IBM, American Express, and Warner Music to your growing B2B company.
+                        </p>
+                        <a href="#contact" class="cta-button">Let's Talk About Your Marketing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">70%</div>
+                        <div class="stat-label">Success Rate Increase</div>
+                        <div class="stat-detail">$2M revenue generated (IBM)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">350%</div>
+                        <div class="stat-label">Website Growth</div>
+                        <div class="stat-detail">Digital transformation (Ringier)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24%</div>
+                        <div class="stat-label">Efficiency Improvement</div>
+                        <div class="stat-detail">Using Six Sigma (AmEx)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-detail">Global enterprise marketing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Proven Experience at Scale</h2>
+                <p class="section-subtitle">
+                    I've built and executed marketing strategies for some of the world's most recognized brands. 
+                    Now I bring that expertise to growing B2B companies.
+                </p>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="company-logo">IBM</div>
+                        <h3>Marketing Resource Manager</h3>
+                        <p>Led strategic co-marketing campaigns across EMEA, Russia, and CIS. Exceeded success targets by 70%, generating $2M in annual revenue through Cloud Computing and SaaS partnerships.</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="company-logo">American Express</div>
+                        <h3>Product Marketing Manager</h3>
+                        <p>Managed product lifecycle and P&L for payment terminals. Improved system efficiency by 24% using Six Sigma methodology. Led global cross-functional teams in product development.</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="company-logo">Ringier/Axel Springer</div>
+                        <h3>Marketing Director</h3>
+                        <p>Developed internet strategy that grew website viewership by 350%. Streamlined product development from 9 to 3 months. Managed $2M marketing budget and team of 6.</p>
+                    </div>
+                    <div class="experience-card">
+                        <div class="company-logo">Warner Music</div>
+                        <h3>Marketing & Merchandising Manager</h3>
+                        <p>Launched national branch and achieved 19% market share—3rd position and best regional performance. Developed brand and media relationships from the ground up.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Choose Your Partnership Level</h2>
+                <p class="section-subtitle">
+                    Flexible options to match your needs and budget. No contracts. Cancel or pause anytime.
+                </p>
+                
+                <div class="service-tiers">
+                    <div class="tier-card">
+                        <div class="tier-name">Strategy Sprint</div>
+                        <div class="tier-price">$1,500<span> one-time</span></div>
+                        <p class="tier-description">
+                            Perfect for getting started. Get strategic clarity and a roadmap to growth in 30 days.
+                        </p>
+                        <ul class="tier-features">
+                            <li>Comprehensive marketing audit</li>
+                            <li>Competitive analysis</li>
+                            <li>90-day strategic roadmap</li>
+                            <li>Prioritized action plan</li>
+                            <li>Quick-win recommendations</li>
+                            <li>One strategy call included</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card featured">
+                        <div class="tier-badge">Most Popular</div>
+                        <div class="tier-name">Marketing Partner</div>
+                        <div class="tier-price">$3,000<span>/month</span></div>
+                        <p class="tier-description">
+                            Full-stack marketing strategy and execution. Unlimited requests, delivered one at a time.
+                        </p>
+                        <ul class="tier-features">
+                            <li>Unlimited marketing requests</li>
+                            <li>All services from menu below</li>
+                            <li>2-5 business day turnaround</li>
+                            <li>Async communication (email/Slack)</li>
+                            <li>Unlimited revisions</li>
+                            <li>One 30-min call per month</li>
+                            <li>Cancel or pause anytime</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tier-card">
+                        <div class="tier-name">Fractional CMO</div>
+                        <div class="tier-price">$5,000<span>/month</span></div>
+                        <p class="tier-description">
+                            Strategic leadership for companies ready to scale. Everything in Partner plus executive-level support.
+                        </p>
+                        <ul class="tier-features">
+                            <li>Everything in Marketing Partner</li>
+                            <li>Weekly 30-min strategy calls</li>
+                            <li>Priority turnaround (1-3 days)</li>
+                            <li>Team/agency management</li>
+                            <li>Board-level reporting</li>
+                            <li>15-20 hours/month dedicated</li>
+                            <li>Strategic partner relationship</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-section">
+                    <h2 style="margin-top: 80px;">Full Service Menu</h2>
+                    <p class="section-subtitle">
+                        Everything available with Marketing Partner or Fractional CMO subscriptions. One request at a time, unlimited revisions.
+                    </p>
+
+                    <div class="menu-category">
+                        <h3>Strategic Services</h3>
+                        <p class="category-timeline">Turnaround: 1-3 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Marketing Strategy & Planning</div>
+                            <div class="menu-item">Competitive Analysis & Market Research</div>
+                            <div class="menu-item">SWOT Analysis</div>
+                            <div class="menu-item">Go-to-Market (GTM) Strategy</div>
+                            <div class="menu-item">Customer Journey Mapping</div>
+                            <div class="menu-item">Marketing Audit & Recommendations</div>
+                            <div class="menu-item">Positioning & Messaging Strategy</div>
+                            <div class="menu-item">Pricing Strategy</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Digital Marketing</h3>
+                        <p class="category-timeline">Turnaround: 2-4 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Landing Page Strategy & Copy</div>
+                            <div class="menu-item">Website SEO Optimization</div>
+                            <div class="menu-item">Website Copy Optimization</div>
+                            <div class="menu-item">Keyword Research</div>
+                            <div class="menu-item">Email Campaign Strategy & Copy</div>
+                            <div class="menu-item">Lead Magnet Development</div>
+                            <div class="menu-item">Sales Page Copy (short & long-form)</div>
+                            <div class="menu-item">A/B Test Design & Analysis</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Campaign Development</h3>
+                        <p class="category-timeline">Turnaround: 3-5 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Google Ads Campaign Strategy & Setup</div>
+                            <div class="menu-item">Meta Ads Campaign Strategy & Setup</div>
+                            <div class="menu-item">Email Marketing Sequence (multi-email)</div>
+                            <div class="menu-item">Marketing Funnel Design</div>
+                            <div class="menu-item">Campaign Performance Analysis</div>
+                            <div class="menu-item">Multi-Page Funnel Strategy</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Content Creation</h3>
+                        <p class="category-timeline">Turnaround: 2-5 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Blog Posts (SEO-optimized, 1000-1500 words)</div>
+                            <div class="menu-item">Case Studies</div>
+                            <div class="menu-item">White Papers / E-books</div>
+                            <div class="menu-item">Email Broadcasts</div>
+                            <div class="menu-item">LinkedIn Posts & Articles</div>
+                            <div class="menu-item">Product Descriptions</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Partnership & Business Development</h3>
+                        <p class="category-timeline">Turnaround: 3-7 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Co-marketing Strategy</div>
+                            <div class="menu-item">Partner Program Development</div>
+                            <div class="menu-item">Marketing Partner Vetting & Management</div>
+                            <div class="menu-item">Channel Strategy</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Specialized Services</h3>
+                        <p class="category-timeline">Turnaround: 5-10 Business Days</p>
+                        <div class="menu-items">
+                            <div class="menu-item">Product Marketing Strategy</div>
+                            <div class="menu-item">Brand Positioning & Architecture</div>
+                            <div class="menu-item">Market Entry Strategy</div>
+                            <div class="menu-item">Music/Experiential Marketing Consultation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Why This Works</h2>
+                <div class="value-props">
+                    <div class="value-prop">
+                        <div class="value-icon">🎯</div>
+                        <h3>Senior-Level Expertise</h3>
+                        <p>20+ years leading marketing at IBM, AmEx, and Warner Music. You get experienced strategic thinking, not junior-level execution.</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="value-icon">⚡</div>
+                        <h3>AI-Augmented Efficiency</h3>
+                        <p>I leverage cutting-edge AI tools to deliver enterprise-quality work faster and more cost-effectively—without sacrificing strategic judgment.</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="value-icon">💼</div>
+                        <h3>Full-Stack Capability</h3>
+                        <p>From strategy to execution, I handle it all. No need to manage multiple freelancers or agencies—one partner for everything.</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="value-icon">🔄</div>
+                        <h3>Flexible & Risk-Free</h3>
+                        <p>No contracts. Cancel or pause anytime. Unlimited revisions. You only pay when you're getting value.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="contact">
+            <div class="container">
+                <h2>Ready to Stop Guessing?</h2>
+                <p>
+                    Let's have a conversation about your marketing challenges. No obligation, no sales pitch—just a strategic discussion about what's possible.
+                </p>
+                <a href="mailto:paul.beka@icloud.com" class="cta-button">Email Me: paul.beka@icloud.com</a>
+                <p class="contact-info" style="margin-top: 40px; font-size: 18px; color: #94a3b8;">
+                    📍 Based in Toronto, Ontario | 🌍 Serving growing companies globally
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Paul Beka. All rights reserved.</p>
+            <p style="margin-top: 10px;">Fractional CMO & Marketing Partner for Growing Companies</p>
+        </div>
+    </footer>
+</body>
+</html>
